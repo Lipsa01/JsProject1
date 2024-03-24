@@ -1,0 +1,65 @@
+<!--                bgc color changer                         -->
+<html>
+    <head>
+        <title>project1</title>
+    </head>
+
+    <body>
+        <H1>Color Changer</H1>
+        <button class="button" id="grey">grey</button>
+        <button class="button" id="white">white</button>
+        <button class="button" id="yellow">yellow</button>
+        <button class="button" id="red">red</button>
+        
+    </body>
+
+    <style>
+        .button{
+            width: 100px;
+            height: 100px;
+        }
+
+        #grey{
+            background-color: grey;
+        }
+        #white{
+            background-color: #fff;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #red{
+            background-color: red;
+        }
+    </style>
+    
+    <script>
+        const buttons = document.querySelectorAll('.button')
+        const body = document.querySelector('body')
+
+        buttons.forEach(function(button){
+            console.log(button);
+            button.addEventListener('click',function(e){
+                console.log(e);
+                console.log(e.target);
+
+                 
+                if (e.target.id=='grey') {
+                    body.style.backgroundColor = e.target.id
+                }
+            
+                if (e.target.id=='white') {
+                    body.style.backgroundColor = e.target.id
+                }
+            
+                if (e.target.id=='yellow') {
+                    body.style.backgroundColor = e.target.id
+                }
+            
+                if (e.target.id=='red') {
+                    body.style.backgroundColor = e.target.id
+                }
+            })
+        })
+    </script>
+</html>
